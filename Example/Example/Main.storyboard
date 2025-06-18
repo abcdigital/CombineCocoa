@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Ib-BL-pNq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Ib-BL-pNq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,7 +14,7 @@
             <objects>
                 <navigationController id="4Ib-BL-pNq" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="XgF-FT-X9f">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="96" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -32,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7by-4H-6wI">
-                                <rect key="frame" x="16" y="140" width="382" height="374"/>
+                                <rect key="frame" x="16" y="192" width="382" height="374"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Fjj-bk-JKz">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="32"/>
@@ -53,7 +55,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="P4e-Ie-0W8">
                                         <rect key="frame" x="0.0" y="119" width="382" height="31"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utR-GO-fQs" userLabel="Tap this button">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utR-GO-fQs" userLabel="Tap this button">
                                                 <rect key="frame" x="0.0" y="0.0" width="325" height="31"/>
                                                 <state key="normal" title="Tap this button"/>
                                             </button>
@@ -68,14 +70,15 @@
                                 </subviews>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Events:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CVe-Hd-do1" userLabel="Debug Text View">
-                                <rect key="frame" x="16" y="514" width="382" height="348"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="16" y="566" width="382" height="262"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="PSG-wD-zhs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PSG-wD-zhs" firstAttribute="trailing" secondItem="7by-4H-6wI" secondAttribute="trailing" constant="16" id="63g-lD-KyA"/>
                             <constraint firstItem="7by-4H-6wI" firstAttribute="top" secondItem="PSG-wD-zhs" secondAttribute="top" id="FQB-eU-nn2"/>
@@ -85,9 +88,13 @@
                             <constraint firstItem="CVe-Hd-do1" firstAttribute="leading" secondItem="tm0-m6-nJj" secondAttribute="leading" id="iOA-eM-f8x"/>
                             <constraint firstItem="CVe-Hd-do1" firstAttribute="top" secondItem="7by-4H-6wI" secondAttribute="bottom" id="tTk-F5-1v3"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="PSG-wD-zhs"/>
                     </view>
                     <navigationItem key="navigationItem" title="CombineCocoa" largeTitleDisplayMode="always" id="Gpl-hh-ZcW">
+                        <barButtonItem key="leftBarButtonItem" title="Push" id="yHd-Er-t4J">
+                            <connections>
+                                <segue destination="lcP-bT-Zct" kind="show" id="Oae-HM-OLD"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Tap Me!" id="bua-r4-BCr"/>
                     </navigationItem>
                     <connections>
@@ -105,5 +112,29 @@
             </objects>
             <point key="canvasLocation" x="192.75362318840581" y="-4.0178571428571423"/>
         </scene>
+        <!--Tap View Controller-->
+        <scene sceneID="mA0-JG-gkv">
+            <objects>
+                <viewController id="lcP-bT-Zct" customClass="TapViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sAz-oV-KjO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="G31-A8-Tp8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="V56-uw-oAW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QcD-MV-SrP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="974" y="-4"/>
+        </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
